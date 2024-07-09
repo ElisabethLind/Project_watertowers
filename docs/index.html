@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Story template</title>
+
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+ 
+    <style>
+      body {
+          height: 100%;
+          margin: 0;
+          padding: 0;
+          font-size: 20px;
+          font-family: 'Lora', Georgia, serif;
+          text-rendering: optimizeLegibility;
+      }
+
+      .content {
+          max-width: 640px;
+          margin: auto;
+      }
+
+      .header {
+          padding: 3em 0;
+      }
+
+      a {
+          color: #f05349;
+      }
+
+      .footer {
+          background: #f4f4f4;
+          text-align: center;
+          font-size: 0.8em;
+          margin-top: 4em;
+          padding: 4em 0;
+      }
+
+      figure {
+          margin: 0;
+          padding-bottom: 1.2em;
+      }
+
+      figcaption {
+          font-size: 0.8em;
+          text-align: center;
+          margin-top: 0.5em;
+          color: #666;
+      }
+
+      h1 {
+          font-family: 'Lora', Georgia, serif;
+          font-weight: bold;
+          font-size: 3em;
+          line-height: 1.1;
+      }
+
+      .subhead {
+          font-family: 'Lora', Georgia, serif;
+      }
+
+      .full-width figure {
+          text-align: center;
+      }
+
+      iframe,
+      img,
+      video {
+          max-width: 100%;
+      }
+
+      p {
+          line-height: 1.6;
+          margin: 0;
+          padding-bottom: 1.2em;
+      }
+
+      ul {
+          margin: 0;
+          padding-bottom: 1em;
+          line-height: 1.6;
+      }
+
+      iframe {
+          padding-bottom: 1.2em;
+      }
+
+      code {
+          font-family: 'Courier New', monospace;
+          background: #fff880;
+      }
+
+      /* margin on mobile */
+      @media (max-width: 640px) {
+          body {
+              font-size: 18px;
+          }
+
+          .content {
+              padding-left: 0.5em;
+              padding-right: 0.5em;
+          }
+      }
+  </style>
+  <style>
+  .with-image-bg {
+      position: relative;
+      background-size: cover;
+      margin-bottom: 2em;
+
+      /* Center everything inside */
+      min-height: 70svh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      /* White text with a shadow */
+      color: white;
+      text-shadow: 0px 0px 30px black,
+          0px 0px 10px rgba(0, 0, 0, 0.5);
+  }
+
+  .with-image-bg {
+      background-image: url('pic7.JPG');
+  }
+</style>
+  <link href="scrolly-styles.css" rel="stylesheet">
+  <script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollama/3.2.0/scrollama.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.3.0/d3.min.js"></script>
+</head>
+
+<body>
+  <div class="header with-image-bg">
+    <div class="content">
+      <h1>About the water, that keeps the city alive</h1>
+      <p class="subhead">You can see them almost everywhere in the city: 
+      Water towers. What’s the story behind them? And are they still in use?</p>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="byline">
+    <p>By <a href="https://x.com/elisabethlind?lang=de">Lisa Lind</a></p>
+    </div>
+    <p>New York City is currently home to 8.3 million people, making it one of the most densely populated places in the world.</p>
+    <div class="full-width">
+      <figure>
+        <video src="video3.MP4" preload="auto" tabindex="0" playsinline autoplay loop muted></video>
+      </figure>
+    </div> 
+  </div>
+  
+  <section id="scrolly-images" class="scrolly-container">
+    <div class="sticky-thing">
+      <img src="img1.jpg">
+    </div>
+
+    <div class="steps-container">
+      <div class="step" id="step1">
+        <div>
+        <p>This can also be seen in the houses that are being built here. These are all the <span style="color: #801119;  font-weight: bold;">buildings with more than six floors</span> - which is roughly equivalent to a height of 20 meters or more.</p>
+        </div>
+      </div>
+
+      <div class="step" id="step2">
+        <p>A special system is needed to supply these buildings with water, otherwise the water pressure would decrease from floor to floor or be too strong for the lower floors.  And this is where the <span style="color: #132130;  font-weight: bold;">water towers</span> come into play, which can be seen all over the city. Many of them are still in use - although the concept is over 150 years old.</p>
+      </div>
+    
+      <div class="step" id="step3">
+        <div>
+          <p>For a long time the area around New York was very well known for its rich waterways, but as industry grew in the 1800s and the number of inhabitants was increasing, the sanitary conditions got worse.</p>
+            <iframe title="The population of NYC was increasing in the 19th century " aria-label="Interactive line chart" id="datawrapper-chart-kUv7l" 
+            src="https://datawrapper.dwcdn.net/kUv7l/1/" scrolling="no" frameborder="0" 
+            style="width: 0; min-width: 100% !important; border: none;" height="478" data-external="1"></iframe>
+            <script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
+            </script>
+        </div>
+      </div> 
+    
+      <div class="step" id="step4">
+        <div>
+          <p>In 1864, The Citizens Association of New York was founded by a group of wealthy New Yorker's with one mission: Access to fresh, clean water for everyone. At this time over 800.000 people lived in the city.</p>
+          <figure>
+            <img
+              src="pic13.JPG">
+              <figcaption><span style="color: white;  font-weight: bold;">This is one of several plaques at the Highbridge in Manhattan/Bronx, which tell the story of the thrive for clean water for the city in the late 19.th century.</span></figcaption>
+          </figure>
+        </div> 
+      </div>
+
+      <div class="step" id="step5">
+        <div>
+          <p>The first one was the Highbridge Water Tower, which was built from 1866 to 1872. Today it is no longer in service as part of the City’s aqueduct system. But since 2021 - after years of restoring – it is open to public again.</p>
+          <figure>
+            <img
+                src="pic12.JPG">
+          </figure>
+        </div>
+      </div>
+  
+      <div class="step" id="step6">
+        <div>
+          <p>Today up to 6.000 water towers are scattered throughout NYC – around 4.800 just in Manhattan. The upper layer of water is still used for everyday use, but the water they hold is also used to help extinguish fires when necessary. About 5,000 to 10,000 gallons of water can be stored in the tanks it takes two to three hours to fill it.</p>
+          <figure>
+            <img
+                src="pic5.JPG">
+          </figure>
+        </div>
+      </div>
+
+      <div class="step" id="step7">
+        <div>
+          <p>The water tower business has been largely in the hands of three companies for over a hundred years: Iseeks Bros, Rosenwach and American Pipe and Tank were the first companies to build and service water towers at the end of the 19th century - and they continue to do so today.</p>
+              <figure>
+                <img
+                    src="pic16.jpg">
+              </figure>
+        </div>
+      </div>
+
+      <div class="step" id="step8">
+        <div>
+          <p>Since 2015, building owners have their water towers inspected once a year. These inspections are carried out by many different companies - but New Yorkers apparently still trust the long-established family businesses. Out of 20,000 inspections since 2015, up to 90 percent have been carried out by these three companies.</p>
+          <iframe title="Three long-established companies dominate the business" aria-label="Pie Chart" id="datawrapper-chart-5M55s" 
+          src="https://datawrapper.dwcdn.net/5M55s/1/" scrolling="no" frameborder="0" 
+          style="width: 0; min-width: 100% !important; border: none;" height="432" data-external="1"></iframe>
+          <script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
+          </script>
+        </div>
+      </div>
+
+      <div class="step" id="step9">
+        <p>However, it is not so clear how accurate these checks are carried out. 
+          Here you can see how many towers have been inspected at least once since 2015.</p>
+      </div>
+
+      <div class="step" id="step10">
+        <p>Compared with the buildings that are higher than 6 floors, it becomes clear that there must be some water towers in the city that have never been inspected so far.</p>
+      </div>
+
+      <div class="step" id="step11">
+        <p>And yet New Yorkers love their water towers, because nowadays, the water towers are not only necessary for the water supply in the City, but they are also part of the skyline and even art objects.</p>
+      </div> 
+    </div>
+  </section>
+
+      <div class="content">
+        <p>In Williamsburg, for example, you can enjoy a drink in a water tower while looking out over the Manhattan skyline.</p>
+          <figure>
+            <img
+              src="pic10.JPG">
+          </figure>
+      </div> 
+    
+     <div class="content">
+        <p>And in Brooklyn Heights New York artist Tom Fruin redesigned an old water tower in 2012 and transformed it into a colorful work of art.</p>
+    </div> 
+
+      <div class="full-width">
+          <figure>
+            <img
+                src="pic11.JPG">
+          </figure>
+      </div>  
+       
+    
+
+  <div class="footer">
+    <div class="content">
+      <p>You can find the code for this template <a href="https://github.com/ElisabethLind/Project_1_Watertowers">here</a>.</p>
+      <p>Maps, text, photos and videos by <a href="https://x.com/elisabethlind?lang=de">Lisa Lind</a>.</p>
+    </div>
+  </div>
+
+   
+
+
+  <script>
+    /*************
+    
+    This is the JavaScript that makes the scrolly work 
+    
+    *************/
+
+    /* 
+    This part attaches a scroll to the element with id="scrolly-images"    
+    */
+    (() => {
+      const scroller = scrollama()
+
+      scroller
+        .setup({
+          parent: document.querySelector("#scrolly-images"),
+          step: ".step",
+          offset: 0.6,
+          debug: false,
+        })
+        .onStepEnter(function ({ element, index, direction }) {
+          const event = new CustomEvent("stepin", { detail: { direction: direction } })
+          element.dispatchEvent(event)
+        })
+        .onStepExit(function ({ element, index, direction }) {
+          const event = new CustomEvent("stepout", { detail: { direction: direction } })
+          if (direction === "up" && element.previousElementSibling) {
+            const event = new CustomEvent("stepin", { detail: { direction: direction } })
+            element.previousElementSibling.dispatchEvent(event)
+          }
+        })
+
+      window.addEventListener("resize", scroller.resize)
+    })()
+
+    /*
+    This part sets up your actions. In this case, it's changing the image in the scrolly container.
+    */
+    d3.select("#step1").on('stepin', (e) => {
+      d3.select(e.target.closest(".scrolly-container")).select("img").attr("src", "img2.jpg")
+    })
+
+    d3.select("#step2").on('stepin', (e) => {
+      d3.select(e.target.closest(".scrolly-container")).select("img").attr("src", "img3.jpg")
+    })
+
+    d3.select("#step3").on('stepin', (e) => {
+      d3.select(e.target.closest(".scrolly-container")).select("img").attr("src", "img1.jpg")
+    })
+
+    d3.select("#step4").on('stepin', (e) => {
+      d3.select(e.target.closest(".scrolly-container")).select("img").attr("src", "img3.jpg")
+    })
+
+    d3.select("#step5").on('stepin', (e) => {
+      d3.select(e.target.closest(".scrolly-container")).select("img").attr("src", "img4.jpg")
+    })
+
+    d3.select("#step6").on('stepin', (e) => {
+      d3.select(e.target.closest(".scrolly-container")).select("img").attr("src", "img3.jpg")
+    })
+
+    d3.select("#step7").on('stepin', (e) => {
+      d3.select(e.target.closest(".scrolly-container")).select("img").attr("src", "img3.jpg")
+    })
+
+    d3.select("#step8").on('stepin', (e) => {
+      d3.select(e.target.closest(".scrolly-container")).select("img").attr("src", "img3.jpg")
+    })
+
+    d3.select("#step9").on('stepin', (e) => {
+      d3.select(e.target.closest(".scrolly-container")).select("img").attr("src", "img5.jpg")
+    })
+
+    d3.select("#step10").on('stepin', (e) => {
+      d3.select(e.target.closest(".scrolly-container")).select("img").attr("src", "img6.jpg")
+    })
+
+    d3.select("#step11").on('stepin', (e) => {
+      d3.select(e.target.closest(".scrolly-container")).select("img").attr("src", "img7.jpg")
+    })
+
+  </script>
+  <style>
+    /* Change this to adjust the padding between steps */
+    .step {
+      margin-bottom: 70vh;
+    }
+  </style>
+
+</body>
+
+</html>
